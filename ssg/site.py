@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 class Site:
-    def __init__(self, source, dest, parsers=none):
+    def __init__(self, source, dest, parsers=None):
         self.source = Path(source)
         self.dest = Path(dest)
         self.parsers = parsers or []
@@ -22,7 +22,7 @@ class Site:
 
     def load_parser(self, extension):
         for parser in self.parsers:
-            if parser.valid_extension(ext):
+            if extension in valid_extension():
                 return parser
 
     def run_parser(self, path):
