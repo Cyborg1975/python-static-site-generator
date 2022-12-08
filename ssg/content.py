@@ -38,7 +38,7 @@ def __iter__(self):
 def __len__(self):
     return len(self.data)
 
-def __repr__(self, self.data):
+def __repr__(self):
     data = {}
     for key, value in self.data.itens(key):
         if key != "content":
